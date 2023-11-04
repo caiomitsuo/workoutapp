@@ -12,7 +12,7 @@
       <q-tabs v-model="tab" dense class="bg-indigo text-white">
         <q-route-tab icon="home" label="Início" :to="{ name: 'home' }">
         </q-route-tab>
-        <q-route-tab icon="work" label="Treino">
+        <q-route-tab icon="add" label="Novo Treino" :to="{ name: 'create-workout' }">
         </q-route-tab>
         <q-route-tab icon="home">
         </q-route-tab>
@@ -36,6 +36,9 @@ export default defineComponent({
 
   setup() {
     const router = useRouter()
+    return {
+      tab: ref('Início')
+    }
   }
 })
 </script>
